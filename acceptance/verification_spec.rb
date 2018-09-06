@@ -15,7 +15,7 @@ describe "Cucumber acceptance" do
     subject(:result) { Accessor.new(load_xml_result(report_path)) }
 
     it { is_expected.to have(0).errors }
-    it { expect(result.skipped_count).to be 1 }
+    it { expect(result.skipped_count).to eq(1) }
     it { is_expected.to have(2).failures }
     it { is_expected.to have(4).testcases }
 
